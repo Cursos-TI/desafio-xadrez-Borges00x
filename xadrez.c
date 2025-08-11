@@ -1,32 +1,45 @@
 #include <stdio.h>
+#include <string.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
+int main () {
 
-int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+    // variavies contadoras de cada peça.
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+    char torre[20], bispo[20], rainha[20], cavalo[20];
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+    int contador = 0;
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+    // Aqui é a parte do código onde as peças se movem usando estruturas de repetição.
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+    printf("Movimento da Torre: \n");
 
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
+    strcpy(torre, "Direita");
 
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
+    for (contador = 1; contador <= 5; contador++) {
+        printf(" %s \n", torre);
+    }
+
+    printf("Movimento do Bispo: \n");
+
+    contador = 0;
+
+    strcpy(bispo, "Cima Direita");
+
+    while (contador <= 5) {
+        printf(" %s \n", bispo);
+        contador++;
+    }
+
+    printf("Movimento da Rainha: \n");
+
+    contador = 0;
+
+    strcpy(rainha, "Esquerda");
+
+    do {
+        printf(" %s \n", rainha);
+        contador++;
+    } while(contador <= 8);
 
     return 0;
 }
