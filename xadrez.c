@@ -14,7 +14,7 @@
        
         if (contador <= 4) 
         {
-            printf(" %s", torre);
+            printf("%s \n", torre);
 
             Torre(contador+1);
         }
@@ -25,16 +25,11 @@
     {
         char bispo[20];
 
-        strcpy(bispo, "Cima");
+        strcpy(bispo, "Cima, Direita");
 
         if (contador <= 5) 
         {
-            printf("\n %s \n", bispo);
-
-            for (int c = 0; c < 1; c++) {
-                strcpy(bispo, "Direita");
-                printf(" %s", bispo);                
-            }
+            printf("%s \n", bispo);
                 Bispo(contador+1);            
         }
     }
@@ -48,7 +43,7 @@
 
         if (contador <= 8)
         {
-            printf(" %s", rainha);
+            printf("%s \n", rainha);
 
             Rainha(contador+1);            
         }
@@ -59,7 +54,7 @@
     {
         char cavalo[20];
 
-        strcpy(cavalo, "Baixo");
+        strcpy(cavalo, "Cima");
 
         for(int c = 0, j = 0; c < 2; c++, j++) 
         {
@@ -67,8 +62,9 @@
 
             if(c < 1)continue;
 
-                strcpy(cavalo, "Esquerda");
-                printf(" %s", cavalo);
+            strcpy(cavalo, "Direita");
+
+                printf("%s \n", cavalo);
             
             if(c == j)break;
         }
@@ -85,17 +81,25 @@ int main () {
 
     Torre(repeticao);
 
-    printf("\n Movimento do Bispo: \n");
+    printf("\n");
+
+    printf("Movimento do Bispo: \n");
 
     Bispo(repeticao);
 
-    printf("\n Movimento da Rainha: \n");
+    printf("\n");
+
+    printf("Movimento da Rainha: \n");
 
     Rainha(repeticao);
 
-    printf("\n Movimento do Cavalo: \n");
+    printf("\n");
+
+    printf("Movimento do Cavalo: \n");
 
     Cavalo(repeticao);
+
+    printf("\n");    
 
     return 0;
 
