@@ -12,7 +12,7 @@
 
        strcpy(torre, "Direita");
        
-        if (contador <= 4) 
+        if (contador <= 5) 
         {
             printf("%s \n", torre);
 
