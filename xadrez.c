@@ -1,66 +1,102 @@
 #include <stdio.h>
 #include <string.h>
 
+// Não finalizado, preciso da ajuda do Tutor
+
+// Functions de cada peça de Xadrez
+
+// Movimento da Torre
+    void Torre(int contador) 
+    {
+       char torre[20];
+
+       strcpy(torre, "Direita");
+       
+        if (contador <= 4) 
+        {
+            printf(" %s", torre);
+
+            Torre(contador+1);
+        }
+    }
+
+// Movimento do Bispo
+    void Bispo(int contador) 
+    {
+        char bispo[20];
+
+        strcpy(bispo, "Cima");
+
+        if (contador <= 5) 
+        {
+            printf("\n %s \n", bispo);
+
+            for (int c = 0; c < 1; c++) {
+                strcpy(bispo, "Direita");
+                printf(" %s", bispo);                
+            }
+                Bispo(contador+1);            
+        }
+    }
+
+// Movimento da Rainha
+    void Rainha(int contador) 
+    {
+        char rainha[20];
+
+        strcpy(rainha, "Esquerda");
+
+        if (contador <= 8)
+        {
+            printf(" %s", rainha);
+
+            Rainha(contador+1);            
+        }
+    }
+
+// Movimento do Cavalo
+    void Cavalo(int contador) 
+    {
+        char cavalo[20];
+
+        strcpy(cavalo, "Baixo");
+
+        for(int c = 0, j = 0; c < 2; c++, j++) 
+        {
+            printf("%s \n", cavalo);
+
+            if(c < 1)continue;
+
+                strcpy(cavalo, "Esquerda");
+                printf(" %s", cavalo);
+            
+            if(c == j)break;
+        }
+
+    }
+
 int main () {
 
-    // variavies contadoras de cada peça.
+    int repeticao = 1;
 
-    char torre[20], bispo[20], rainha[20], cavalo[20];
-
-    int contador = 0;
-
-    // Aqui é a parte do código onde as peças se movem usando estruturas de repetição.
+    // As Functions são chamadas:
 
     printf("Movimento da Torre: \n");
 
-    strcpy(torre, "Direita");
+    Torre(repeticao);
 
-    for (contador = 1; contador <= 5; contador++) {
-        printf(" %s \n", torre);
-    }
+    printf("\n Movimento do Bispo: \n");
 
-    printf("Movimento do Bispo: \n");
+    Bispo(repeticao);
 
-    contador = 0;
+    printf("\n Movimento da Rainha: \n");
 
-    strcpy(bispo, "Cima Direita");
+    Rainha(repeticao);
 
-    while (contador < 5) {
-        printf(" %s \n", bispo);
-        contador++;
-    }
+    printf("\n Movimento do Cavalo: \n");
 
-    printf("Movimento da Rainha: \n");
-
-    contador = 0;
-
-    strcpy(rainha, "Esquerda");
-
-    do {
-        printf(" %s \n", rainha);
-        contador++;
-    } while(contador < 8);
-
-    printf("Movimento do Cavalo: \n");
-
-    contador = 0;
-
-    strcpy(cavalo, "Baixo");
-
-    while (contador < 1) 
-    {
-
-        for (contador = 1; contador <= 2; contador++) 
-        {
-            printf(" %s \n", cavalo);
-        }
-
-        contador = 1;
-
-        strcpy(cavalo, "Esquerda");
-
-        printf(" %s \n", cavalo);
-    }
+    Cavalo(repeticao);
 
     return 0;
+
 }
