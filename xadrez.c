@@ -25,7 +25,7 @@ int main () {
 
     strcpy(bispo, "Cima Direita");
 
-    while (contador <= 5) {
+    while (contador < 5) {
         printf(" %s \n", bispo);
         contador++;
     }
@@ -39,7 +39,28 @@ int main () {
     do {
         printf(" %s \n", rainha);
         contador++;
-    } while(contador <= 8);
+    } while(contador < 8);
+
+    printf("Movimento do Cavalo: \n");
+
+    contador = 0;
+
+    strcpy(cavalo, "Baixo");
+
+    while (contador < 1) 
+    {
+
+        for (contador = 1; contador <= 2; contador++) 
+        {
+            printf(" %s \n", cavalo);
+        }
+
+        contador = 1;
+
+        strcpy(cavalo, "Esquerda");
+
+        printf(" %s \n", cavalo);
+    }
 
     return 0;
 }
