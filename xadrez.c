@@ -61,11 +61,12 @@
             printf("%s \n", cavalo);
 
             if(c < 1)continue;
+            for (int i=0; i < 1; i++) {
 
-            strcpy(cavalo, "Direita");
+                strcpy(cavalo, "Direita");
 
                 printf("%s \n", cavalo);
-            
+            }
             if(c == j)break;
         }
 
